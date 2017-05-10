@@ -1,0 +1,13 @@
+'''
+Generating a random code
+By HuahuiChen
+'''
+
+import random
+
+def genCode(length):
+    s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-x/"
+    return random.sample(s, length)
+
+for i in range(200):
+    print(genCode(5))
