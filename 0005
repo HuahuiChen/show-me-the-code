@@ -1,0 +1,21 @@
+# encoding: utf-8
+import cv2
+import os
+
+dirname = r'D:\计算机类\python\code\show_me_the_code'
+resize_w = 400
+resize_h = 400
+dest_append = 'resize_'
+
+# 获取所有的jpg文件
+images = os.walk('.')
+for path, d, filelist in images:
+    for filename in filelist:
+        if filename.endswith('.jpg'):
+            data = cv2.imread(filename)
+            data2 = cv2.resize(data, (resize_w, resize_h))
+            cv2.imwrite(dest_append + filename, data2)
+print('c')
+pass
+
+
